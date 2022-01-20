@@ -11,10 +11,11 @@ Write a function to insert a name to the end of the list. Add your own name to t
 var names = ["Maria", "Antony", "Joy", "Juan"];
 
 function agregar(){
-    names.push("Omar");
+    var owname = prompt("¿Cual es tu nombre?")
+    names.push(owname);
     alert(names);
 }
-agregar();
+//agregar();
 
 /*------------------------------------------------------------------------------------------------------------
 
@@ -22,19 +23,57 @@ agregar();
 Part 2
 Write a function that takes in a name and checks if the list has that name. It should return back a boolean - true/false.*/
 
+function checkname(){
+    var check=false;
+    let nombre = prompt("¿Que nombre quieres buscar?");
+    for(let i=0;i<=nombre.length;i++){
+    if(nombre==names[i]){
+       check=true;
+       }
+    }
+    alert(names);
+    alert("Existe el nombre en la lista? " + check);
+}
+//checkname();
+
+//--------------------------------------------------------------------------------------------
 
 /*----------------------------------------------------------------------------------------------
 Part 3
 Write a function that takes in a list of names. This function should compare the list taken into the names list you currently have. The function should pass back an array with the names that are in both lists.
 ------------------------------------------------------------------------------------------------/*/
 
-
+function matriz(){
+    var names2 = ["Karen", "Omar", "Antony", "Joy","Juan"];
+    var matriz1=[];
+    var contador=0;
+    for(let j=0;j<names.length;j++){
+        names[j];
+        for(let u=0;u<names2.length;u++){
+        if(names2[u]==names[j]){
+            matriz1[contador]=names2[u];
+            contador++;
+        }
+      }
+    }
+    alert(matriz1);
+}
+//matriz();
 
 /*----------------------------------------------------------------------------------------------------------
 Part 4
 Write a function that takes in a list of names and returns a list of Integers with the length of the names in the same order as received. Hint use the push function
 ----------------------------------------------------------------------------------------------------------*/
 
+function listInt(){
+    var longitud=[];
+    for(let i=0;i<names.length;i++){
+        longitud.push(names[i].length);
+    }
+    alert(names);
+    alert(longitud);
+}
+//listInt();
 
 /*-------------------------------------------------------------------------------------------------------------
 Exercise #2
